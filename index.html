@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School</title>
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            
+  .Txt {
+	font-weight: bold;
+	text-align: center;
+  text-shadow: 2px 2px 2px orangered;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-family: Comic Sans MS, cursive;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 230px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#loader {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #fa8e00;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+        body, html {
+          height: 100%;
+          font-family: Arial, Helvetica, sans-serif;
+          margin-top: 0;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        .bg-img {
+          /* The image used */
+          background-image: url("school.jpg");
+          background-attachment: fixed;
+            
+          min-height: 100%;
+        
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: none;
+   color: white;
+   text-align: center;
+   position: fixed;
+}
+samp{
+  
+  color: #f0f0f0;
+  padding-left: 22px;
+  padding-right: 22pX;
+  
+  text-decoration: none;
+  
+  display: inline-block;
+  padding: 0.9375em 21875;
+  letter-spacing: 2px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  
+
+}
+#hov:hover{
+  font-size: large;
+  transition: 0.7s ease;
+}
+.hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: white;
+
+}ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 15%;
+  overflow: hidden;
+  background-color:none;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        
+        </style>
+        </head>
+        <body class="bg-img" onload="myFunction()">
+          
+<div id="loader"></div>
+<div style="display:none;padding-top: 30px;" id="myDiv" class="animate-bottom">
+<h1><p class="Txt">Moutamadris</p></h1>
+   <br>
+   <br>
+      <center>
+<ul class="Txt" >
+   <li class="dropdown"> 
+<a  class="dropbtn">
+<button class="button" style="vertical-align:middle" disabled><span>نقط ونتائج</span></button></a>
+<div class="dropdown-content">
+  <a href="#">Taalim.ma</a>
+  <a href="#">Moutamadris</a>
+  <a href="#">Massar</a>
+  <a href="#">الاطلاع على النقط</a>
+</div>
+</li>
+
+<li  class="dropdown">
+<a >
+<button class="button" style="vertical-align:middle" disabled><span>خدمات تعليمية</span></button></a>
+<div class="dropdown-content">
+  <a href="#">دروس و تمارين</a>
+  <a href="#">امتحانات</a>
+  <a href="#">فروض</a>
+  <a href="#">العطل</a>
+</li>
+
+<li class="dropdown">
+<a>
+<button class="button" style="vertical-align:middle" disabled><span> نصائح ومساعدة</span></button></a>
+<div class="dropdown-content">
+  <a href="#">طلب مساعدة</a>
+  <a href="#">دروس الدعم</a>
+  <a href="#">دروس عبر الانترنت</a>
+  <a href="#"></a>
+</li>
+
+<li class="dropdown"><a>
+<button class="button" style="vertical-align:middle" disabled><span>إتصل بنا</span></button></a>
+<div class="dropdown-content">
+   <a href="#"><img src="whatsapp.png">Whatsapp</a>
+  <a href="#"><img src="messenger.png">Messenger</a>
+  <a href="#"><img src="instagram.png">Instagram</a>
+  <a href="#"><img src="youtube.png">Youtube</a></div>
+
+</li>
+<li>
+<a href="#">
+<button class="button" style="vertical-align:middle" ><span>عن الموقع</span></button></a>
+</li>
+</ul>
+</center>
+</h3>
+<script>
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 1000);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
+
+<div class="footer">
+    <samp id="hov">Mentions legalles</samp> || <samp id="hov"> C.G.V </samp>||<samp id="hov"> print du site </samp>|| <samp id="hov">Imprimer la Page</samp> || <samp id="hov">S'inscire à la newsletter </samp>||<samp id="hov"> Contact </samp>
+     
+    <hr style="width: 80%;">
+   </div>
+   <div class="footer" style="background-color: gray;">
+     @Apocalipse Copier Right 2022
+     
+   </div>
+</body>
+</html>
